@@ -11,15 +11,21 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 Solution:--
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int>& nums, int target) 
+    {
         vector<int> vec;
-        for(int i=0; i<nums.size()-1; i++) {
-            for(int j=i+1; j<nums.size(); j++) {
-                if((nums[i]+nums[j]==target)) {
-                    return nums[i];
-                    return nums[j];
+        for(int i=0; i<nums.size()-1; i++) 
+        {
+            for(int j=i+1; j<nums.size(); j++) 
+            {
+                if((nums[i]+nums[j]==target)) 
+                {
+                    vec.push_back(i);
+                    vec.push_back(j);
                 }
             }
         }
+        return vec;
     }
 };
+
